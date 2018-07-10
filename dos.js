@@ -1,8 +1,3 @@
-/*Enunciado:
-Bienvenidos. 
-mostrar * en un solo alert * el mensaje 
-"usted es xxxxx y vive en la localidad de xxxxxxxx".*/
-
 function mostrar()
 {
   
@@ -12,6 +7,5 @@ function mostrar()
 	elNombre = document.getElementById('elNombre').value;
 	laLocalidad = document.getElementById('laLocalidad').value;
 
-	alert("Usted es " + elNombre + " y vive en la localidad de " + laLocalidad);
-
+	alert("Su nombre es " + elNombre + " y vive en " + laLocalidad)
 }

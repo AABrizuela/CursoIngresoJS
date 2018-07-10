@@ -1,34 +1,23 @@
 /*Enunciado:
 Bienvenidos. 
-Pedir por prompt el precio y el porcentaje 
-de descuento, mostrar: 
-1-El descuento en dinero, 
-2-El precio con el descuento , 
-3-El IVA 
-todos los anteriores e un solo alert 
-4-Y solo el precio con descuento 
-más el IVA por id .*/
+Pedir por prompt el precio y
+el porcentaje de descuento, 
+mostrar el precio final con descuento por id.*/
 
 function mostrar()
 {
 
-	var precioFinal;
+	var precio;
 	var descuento;
-	var IVA;
+	var elPrecioFinal;
 
-	precioFinal = prompt("Ingrese el precio.")
-	descuento = prompt("Ingrese el descuento.")
-	IVA = precioFinal / 21
+	precio = prompt("Ingrese el precio.");
+	precio = parseInt(precio);
+	descuento = prompt("Ingrese el descuento.");
+	descuento = parseInt(descuento);
 
-	descuento = (precioFinal * descuento) / 100;
+	elPrecioFinal = precio - (precio * descuento / 100);
 
-	alert(precioFinal + descuento + IVA);
-
-
-
-
-
-
-
+	document.getElementById('elPrecioFinal').value = elPrecioFinal;
 
 }
