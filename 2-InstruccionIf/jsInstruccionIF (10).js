@@ -2,28 +2,30 @@ function mostrar()
 {
 	//Genero el número RANDOM entre 1 y 10 
 	
-	var numero
+	var numero;
 
 	numero = Math.floor(Math.random() * 10) + 1;
 
-	if(numero = 9 || numero = 10)
+	if(numero >= 9)
 	{
 	
-		alert("Excelente! Tu nota es un " + numero)
+		alert("Excelente! Tu nota es un " + numero);
 
 	}
 
 	else
 	{
-		if(numero < 4 && numero > 9)
+		if(numero > 4 && numero < 9)
 		{
 			
-			alert("Tu nota es un " + numero + ", aprobó.")
+			alert("Tu nota es un " + numero + ", aprobó.");
 
 		}
 		else
 		{
-			alert("Tu nota es un " + numero + ". Vamos! La proxima se puede.")
+			
+			alert("Tu nota es un " + numero + ". Vamos! La proxima se puede.");
+			
 		}
 	}
 
