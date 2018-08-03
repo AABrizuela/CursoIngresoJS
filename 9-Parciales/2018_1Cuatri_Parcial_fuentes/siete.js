@@ -1,3 +1,91 @@
+function mostrar()
+{
+
+	var contador = 0;
+	var nombre;
+	var sexo;
+	var edad;
+	var nota;
+	var peorNota;
+	var peorNotaSexo;
+	var acumuladorNota;
+	var promedioNota;
+	var acumuladorVarones;
+
+	acumuladorVarones = 0;
+	acumuladorNota = 0;
+
+
+	while(contador < 5)
+	{
+		contador++;
+		nombre = prompt("Ingrese nombre.");
+		sexo = prompt("Ingrese sexo.");
+		sexo = sexo.toLowerCase();
+		
+		while (sexo != "f" && sexo != "m") 
+		{
+
+			//alert("Sexo incorrecto.");
+			sexo = prompt("Error. Ingrese F o M.");
+			sexo = sexo.toLowerCase();
+
+			if (sexo == "m") 
+			{
+
+				acumuladorVarones++
+
+			}else
+			{
+
+			}
+		}
+
+		nota = prompt("Ingrese nota.");
+		nota = parseInt(nota);
+		acumuladorNota = acumuladorNota + nota;
+
+		while (isNaN(nota) || nota < 0 || nota > 11)
+		{
+
+			//alert("Nota incorrecta.");
+			nota = prompt("Error. Ingrese nota.");
+			nota = parseInt(nota);
+			nota = acumuladorNota + nota;
+		}
+
+		if (contador == 1)
+		{
+
+			peorNota = nota;
+			peorNotaSexo = sexo;
+
+		}else
+		{
+
+			if(nota < peorNota)
+			{
+
+				peorNota = nota;
+				peorNotaSexo = sexo;
+
+			}
+
+			if(sexo == "m" && nota > 5)
+			{
+
+				acumuladorVarones++;
+
+			}
+		}	
+	}
+
+	promedioNota = acumuladorNota / 5;
+
+	alert("El promedio de las notas totales es: " + promedioNota + ".");
+	alert("La peor nota es un: " + peorNota + " y el sexo de la persona es: " + peorNotaSexo + ".");
+	alert("La cantidad de varones cuya nota fue mayor o igual a 6 es: " + acumuladorVarones + ".");
+}
 /*
 	Jose	M 33 9
 	Maria	F 22 6
@@ -17,7 +105,7 @@
 
 */
 
-function mostrar()
+/*function mostrar()
 {
 
 	var respuesta = true;
@@ -173,7 +261,7 @@ function mostrar()
 
 	}*/
 
-	respuesta = confirm("Desea continuar ingresando datos?");
+/*	respuesta = confirm("Desea continuar ingresando datos?");
 
 	}
 
@@ -184,4 +272,4 @@ function mostrar()
 	console.log("Hay " + acumuladorMujeres + " mujer(es) y " + acumuladorHombres + " hombre(s).");
 	console.log("Hay " + acumuladorAprobados + " alumno(s) aprobado(s) y " + acumuladorDesaprobados + " alumno(s) desaprobado(s).");
 
-}
+}*/
