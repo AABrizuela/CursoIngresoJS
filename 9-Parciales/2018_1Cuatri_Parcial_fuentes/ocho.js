@@ -28,7 +28,6 @@ function mostrar()
 	var numeroMinimo;
 	var letraNumeroMaximo;
 	var letraNumeroMinimo;
-	var flag;
 
 	respuesta = true;
 	contador = 0;
@@ -37,7 +36,6 @@ function mostrar()
 	contadorCeros = 0;
 	acumuladorNumerosNegativos = 0;
 	acumuladorNumerosPositivos = 0;
-	flag = 0;
 	numeroMaximo = 0;
 	numeroMinimo = 0;
 	letraNumeroMinimo = 'x';
@@ -109,25 +107,21 @@ function mostrar()
 
 			}
 
-			if (flag == 0 || numero > 0)
-			{
+		}
 
-				acumuladorNumerosPositivos = acumuladorNumerosPositivos + numero;
-				flag = 1;
+		if (numero > 0)
+		{
 
-			}
-
-			if (flag == 0 || numero < 0)
-			{
-
-				acumuladorNumerosNegativos = acumuladorNumerosNegativos + numero;
-				flag = 1;
-
-			}
-
+			acumuladorNumerosPositivos = acumuladorNumerosPositivos + numero;			
 
 		}
 
+		if (numero < 0)
+		{
+
+			acumuladorNumerosNegativos = acumuladorNumerosNegativos + numero;			
+
+		}
 
 		respuesta = confirm("Desea seguir ingresando datos?");
 
