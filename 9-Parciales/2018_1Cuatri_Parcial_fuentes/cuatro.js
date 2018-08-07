@@ -3,32 +3,36 @@ function mostrar()
 
 	var numeroUno;
 	var numeroDos;
+	var resta;
+	var suma;
 
-	numeroUno = prompt("Ingrese un numero.");
-	numeroDos = prompt("Ingrese un numero.");
+	numeroUno = parseInt(prompt("Ingrese un numero."));
+	numeroDos = parseInt(prompt("Ingrese un numero."));
 
-	if (numeroUno == numeroDos) 
+	if (numeroUno > numeroDos)
 	{
 
-		alert(numeroUno + numeroDos),
+		resta = numeroUno - numeroDos;
+		alert("La resta es: " + resta);
 
 	}else
 	{
 
-		if (numeroUno > numeroDos)
+		suma = numeroUno + numeroDos;
+
+
+		if (suma > 10)
 		{
 
-			alert(numeroUno / numeroDos);
+			alert("La suma es " + suma + " y superó el 10");
 
 		}else
 		{
 
-			numeroUno = parseInt(numeroUno);
-			numeroDos = parseInt(numeroDos);
-
-			alert(numeroUno + numeroDos);
+			alert("La suma es: " + suma);
 
 		}
 
 	}
+
 }
